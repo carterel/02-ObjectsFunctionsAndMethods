@@ -19,14 +19,14 @@ def main():
     # When the _TODO_s ask you to test YOUR code, comment-out the following
     # two statements and add calls to   better_draw_circles   et al as needed.
     # -------------------------------------------------------------------------
-    #draw_circles(rg.Point(100, 50))
-    #draw_circles(rg.Point(-200, 0))
+    draw_circles(rg.Point(100, 50))
+    draw_circles(rg.Point(-200, 0))
 
-    #better_draw_circles(10)
-    #better_draw_circles(5)
+    better_draw_circles(10)
+    better_draw_circles(5)
 
-    even_better_draw_circles((100, 40), 15, 10, 'blue', 15)
-    even_better_draw_circles((150, 70), 20, 5, 'green', 10)
+    even_better_draw_circles(rg.Point(100, 40), 15, 10, 'blue', 15)
+    even_better_draw_circles(rg.Point(50, 10), 20, 5, 'green', 10)
 
     window.update()
     window.close_on_mouse_click()
@@ -94,7 +94,7 @@ def draw_circles(point):
 
 ###############################################################################
 #
-# TODO: 3a.
+# Done: 3a.
 #   The function
 #       better_draw_circles
 #   defined below this _TODO_ starts out exactly the same as the code for
@@ -117,7 +117,7 @@ def draw_circles(point):
 #   just as in   draw_circles.  But if that parameter is given the value 3,
 #   then the circles should have radii:  3  6  9  12  15  18 ..., respectively.
 #
-# TODO: 3b.
+# Done: 3b.
 #   In   main  at the place indicated, comment-out the two existing calls
 #   to  draw_circles  and add at least two calls to the improved
 #   better_draw_circles  function, to TEST that your modified code is correct
@@ -131,7 +131,6 @@ def better_draw_circles(radii):
     Starts out the same as the   draw_circles   function defined ABOVE.
     You Will make it an IMPROVED, MORE POWERFUL function per the above _TODO_.
     """
-    window = rg.TurtleWindow()
     turtle = rg.SimpleTurtle()
     turtle.pen_up()
     turtle.set_heading(0)  # Point "east" (towards the right)
@@ -148,11 +147,9 @@ def better_draw_circles(radii):
         turtle.pen_down()
         turtle.draw_circle(radii * k)  # Radius 15, 30, 45, 60, ...
 
-    window.close_on_mouse_click()
-
 ###############################################################################
 #
-# TODO: 4a.
+# Done: 4a.
 #   In the previous _TODO_, you made a MORE POWERFUL version
 #   of   draw_circles   by introducing a PARAMETER for the amount
 #   by which the radii of the concentric circles increase.
@@ -174,7 +171,7 @@ def better_draw_circles(radii):
 #   to the body of the   even_better_draw_circles   function defined below.
 #   Then add parameters and modify the code to make them work!
 #
-# TODO: 4b.
+# Done: 4b.
 #   In   main  at the place indicated, comment-out the existing calls
 #   to  better_draw_circles  and add at least two calls to the improved
 #   even_better_draw_circles  function, to TEST that your modified code is
@@ -187,7 +184,6 @@ def even_better_draw_circles(point, radii, number, color, thickness):
 
     """ An improved version of draw_circles, per the _TODO_ above. """
     # READ the above _TODO_ and then copy-paste code from better_circles here:
-    window = rg.TurtleWindow()
     turtle = rg.SimpleTurtle()
     turtle.go_to(point)
     turtle.pen_up()
@@ -206,10 +202,8 @@ def even_better_draw_circles(point, radii, number, color, thickness):
         turtle.pen_down()
         turtle.draw_circle(radii * k)  # Radius 15, 30, 45, 60, ...
 
-    window.close_on_mouse_click()
-
 ###############################################################################
-# TODO: 5.
+# Done: 5.
 #
 # Finally, comment-out the existing calls to  even_better_draw_circles  and
 # add code in   main  to draw various circles that form a BEAUTIFUL picture!
